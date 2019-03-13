@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ashen Design</title>
+</head>
+
+<body>
+    <div class="wow fadeIn" id="particles-js">
+    </div>
+    <nav class="navbar is-light is-loading" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="navbar-burger-id">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbar-menu-id">
+                <a href="/" class="navbar-item has-text-centered">Home</a>
+                <a href="/skills" class="navbar-item has-text-centered">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="columns is-loading">
+        <div class="column">
+
+            <section class="hero">
+                <div class="hero-body">
+                    <div class="header">
+                        <h1 class="title has-text-centered fadeIn" id="sitename">ASHEN DESIGN</h1>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="container" id="mainbody">
+                        <div class="container" id="welcomebar">
+                            <h2 class="subtitle has-text-centered fadeIn" id="sitesubtitle">
+                                <br>
+                                <br>Welcome to my website</h2>
+                            <br>
+                        </div>
+                        <br>
+                        <img id="mainlogoimage" src="/images/logo.png" width="256" height="256" alt="">
+
+
+                        <div class="hero">
+                            <div class="hero-body">
+                                <div class="container">
+                                    <div class="columns">
+                                        <div class="column"></div>
+                                        <div class="column">
+                                            <p class="has-text-left wow fadeIn">Hi there!
+                                                <br>
+                                                <br>My name is Ashleigh Scott. I am a game design graduate from the United Kingdom.
+                                                <br>
+                                                <br>My hobbies include web development, programming, and content creation on
+                                                websites such as YouTube and Twitch.
+                                                <br>
+                                                <br>I hope this site will help you understand a little bit more about me, and
+                                                the sort of things I get up to in my free time. <br><br>If you’d like to see examples
+                                                of my Web Development work, check out my GitHub.
+                                                <br>
+                                                <br>
+
+                                                <p class="buttons is-centered wow fadeIn">
+                                                    <a class="button is-outlined" href="https://github.com/ashen-design">
+                                                        <span class="icon">
+                                                            <i class="fab fa-github"></i>
+                                                        </span>
+                                                        <span>GitHub</span>
+                                                    </a>
+                                                    <a class="button is-outlined wow fadeIn" href="https://linkedin.com/in/ashen-design">
+                                                        <span class="icon">
+                                                            <i class="fab fa-linkedin"></i>
+                                                        </span>
+                                                        <span>LinkedIn</span>
+                                                    </a>
+                                                </p>
+                                        </div>
+
+                                        <div class="column"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            </div>
+        </div>
+        </div>
+
+        <div class="hero is-light is-small footer-bg is-loading">
+            <div class="hero-body">
+                <div class="columns">
+                    <div class="column is-one-fifth">
+                        <p id="footerinfo">
+                            <strong>Ashen Design</strong>
+                            <br>Copyright Ashleigh Scott 2018</p>
+                    </div>
+                    <div class="column" id="quotes">
+                        <strong>
+                            <span class="icon">
+                                <i class="fas fa-quote-left"></i>
+                            </span> Quote of the day </strong>
+                        <span class="icon">
+                            <i class="fas fa-quote-right"></i>
+                        </span>
+                        <em> {{ quote }}</em>
+                    </div>
+                </div>
+            </div>
+            <script>
+                // Close mobile & tablet menu on item click
+                $('.navbar-item').each(function (e) {
+                    $(this).click(function () {
+                        if ($('#navbar-burger-id').hasClass('is-active')) {
+                            $('#navbar-burger-id').removeClass('is-active');
+                            $('#navbar-menu-id').removeClass('is-active');
+                        }
+                    });
+                });
+
+                // Open or Close mobile & tablet menu
+                $('#navbar-burger-id').click(function () {
+                    if ($('#navbar-burger-id').hasClass('is-active')) {
+                        $('#navbar-burger-id').removeClass('is-active');
+                        $('#navbar-menu-id').removeClass('is-active');
+                    } else {
+                        $('#navbar-burger-id').addClass('is-active');
+                        $('#navbar-menu-id').addClass('is-active');
+                    }
+                });
+
+                $(document).on('click', '.notification > button.delete', function () {
+                    $(this).parent().addClass('animated');
+                    $(this).parent().addClass('fadeOut');
+                    return false;
+                });
+            </script>
+
+            <script>
+                const quotes = new Vue({
+                    el: '#quotes',
+                    data: {
+                        'quote': 'No quote today...'
+                    },
+                    mounted() {
+                        axios
+                            .get('https://quotes.rest/qod')
+                            .then(response => { this.quote = response.data.contents.quotes[0].quote })
+                    }
+                });
+
+            </script>
+              <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+<script src="particles.js/particles.js"></script>
+<script>
+
+    particlesJS.load('particles-js', 'particles/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });</script>
+</body>
+
+</html>

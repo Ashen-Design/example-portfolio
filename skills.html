@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ashen Design</title>
+</head>
+
+<body>
+    <div class="wow fadeIn" id="particles-js">
+    </div>
+    <nav class="navbar is-light is-loading" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="navbar-burger-id">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbar-menu-id">
+                <a href="/" class="navbar-item has-text-centered">Home</a>
+                <a href="/skills" class="navbar-item has-text-centered">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container is-loading">
+            <section class="hero">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="header">
+                            <h1 class="title has-text-centered" id="sitename">ASHEN DESIGN</h1>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="container" id="mainbody" style="width: 80%">
+                            <div class="container" id="welcomebar" style="width: 100%">
+                                <h2 class="subtitle has-text-centered" id="sitesubtitle">
+                                    <br>
+                                    <br>Skills Breakdown</h2>
+                                <br>
+                            </div>
+                            <div class="hero">
+                                <div class="hero-body">
+                                    <p class="has-text-centered wow fadeIn">Here is a breakdown of all the technologies and libraries I am familiar with.<br></p>
+                                    <br>
+                                    <div class="columns">
+                                        <div class="column">
+                                            <div class="box wow fadeIn" data-wow-delay="1s">
+                                                <article class="media">
+                                                    <div class="media-left">
+                                                        <figure>
+                                                            <span class="icon">
+                                                                <i class="fab fa-3x fa-html5"></i>
+                                                            </span>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="media-content">
+                                                        <div class="content">
+                                                            <p>
+                                                                <strong>HTML5</strong><br>
+                                                                Intermediate
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+
+                                            <div class="box wow fadeIn" data-wow-delay="6s">
+                                                    <article class="media">
+                                                        <div class="media-left">
+                                                            <figure>
+                                                                <span class="icon">
+                                                                    <i class="fab fa-3x fa-node-js"></i>
+                                                                </span>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="media-content">
+                                                            <div class="content">
+                                                                <p>
+                                                                    <strong>Node.js</strong><br>
+                                                                    Basic
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                        </div>
+                                        <div class="column">
+                                            <div class="box wow fadeIn" data-wow-delay="2s">
+                                                <article class="media">
+                                                    <div class="media-left">
+                                                        <figure>
+                                                            <span class="icon">
+                                                                <i class="fab fa-3x fa-css3"></i>
+                                                            </span>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="media-content">
+                                                        <div class="content">
+                                                            <p>
+                                                                <strong>CSS3</strong><br>
+                                                                Intermediate
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="box wow fadeIn"  data-wow-delay="3s">
+                                                <article class="media">
+                                                    <div class="media-left">
+                                                        <figure>
+                                                            <span class="icon">
+                                                                <i class="fab fa-3x fa-js"></i>
+                                                            </span>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="media-content">
+                                                        <div class="content">
+                                                            <p>
+                                                                <strong>JavaScript</strong><br>
+                                                                Basic
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="box wow fadeIn" data-wow-delay="4s">
+                                                <article class="media">
+                                                    <div class="media-left">
+                                                        <figure>
+                                                            <span class="icon">
+                                                                <i class="fab fa-3x fa-vuejs"></i>
+                                                            </span>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="media-content">
+                                                        <div class="content">
+                                                            <p>
+                                                                <strong>Vue.js</strong><br>
+                                                                Basic
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            
+                                                <div class="box wow fadeIn" data-wow-delay="5s">
+                                                        <article class="media">
+                                                            <div class="media-left">
+                                                                <figure>
+                                                                    <img src="images/electron.svg" width="38px" height="45px" alt="">
+                                                                </figure>
+                                                            </div>
+                                                            <div class="media-content">
+                                                                <div class="content">
+                                                                    <p>
+                                                                        <strong>Electron</strong><br>
+                                                                        Basic
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <br>
+            </div>
+    </main>
+
+    <div class="hero is-light is-small footer-bg is-loading">
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column is-one-fifth">
+                    <p id="footerinfo">
+                        <strong>Ashen Design</strong>
+                        <br>Copyright Ashleigh Scott 2018</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Close mobile & tablet menu on item click
+        $('.navbar-item').each(function (e) {
+            $(this).click(function () {
+                if ($('#navbar-burger-id').hasClass('is-active')) {
+                    $('#navbar-burger-id').removeClass('is-active');
+                    $('#navbar-menu-id').removeClass('is-active');
+                }
+            });
+        });
+
+        // Open or Close mobile & tablet menu
+        $('#navbar-burger-id').click(function () {
+            if ($('#navbar-burger-id').hasClass('is-active')) {
+                $('#navbar-burger-id').removeClass('is-active');
+                $('#navbar-menu-id').removeClass('is-active');
+            } else {
+                $('#navbar-burger-id').addClass('is-active');
+                $('#navbar-menu-id').addClass('is-active');
+            }
+        });
+
+        $(document).on('click', '.notification > button.delete', function () {
+            $(this).parent().addClass('animated');
+            $(this).parent().addClass('fadeOut');
+            return false;
+        });
+    </script>
+<script src="particles.js/particles.js"></script>
+<script>
+
+    particlesJS.load('particles-js', 'particles/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });</script>
+              <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+</body>
+
+</html>
